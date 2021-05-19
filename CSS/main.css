@@ -455,20 +455,12 @@ transition: .3s;
 
 /* Start About */
 .about {
-  padding-top: var(--sectionPadding);
   overflow: hidden;
   text-align: center;
 }
 .about img {
   position: relative;
-  bottom: -120px;
-  margin-top: -120px;
   max-width: 100%;
-}
-@media (max-width: 767px) {
-  .about img {
-    bottom: -60px;
-  }
 }
 /* End About */
 /* Start Stats */
@@ -493,6 +485,7 @@ transition: .3s;
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .stats .container .box {
   color: white;
@@ -518,7 +511,7 @@ transition: .3s;
   width: 40px;
   height: 40px;
   display: flex;
-  background-color: #333;
+  background-color: var(--secondColor);
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -542,14 +535,8 @@ transition: .3s;
 .our-skills .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
-@media (min-width: 992px) {
-  .our-skills .container > div {
-    flex-basis: 45%;
-  }
-}
-
 .our-skills .container > div > h3 {
   margin: 0 0 40px;
   font-weight: normal;
@@ -670,13 +657,13 @@ transition: .3s;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 75%);
+  background-color: rgb(10 33 57 / 50%);
 }
 .quote .container {
   position: relative;
 }
 .quote q {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 20px;
   display: block;
 }
@@ -685,12 +672,14 @@ transition: .3s;
   content: "\f10d";
   font-weight: 600;
   margin-right: 10px;
+  font-size: 15px;
 }
 .quote q::after {
   font-family: "Font Awesome 5 Free";
   content: "\f10e";
   font-weight: 600;
   margin-left: 10px;
+  font-size: 15px;
 }
 /* End Quote */
 /* Start Pricing */
@@ -933,26 +922,17 @@ font-size: 18px;
 .footer {
   padding-top: calc(var(--sectionPadding) / 2);
   padding-bottom: calc(var(--sectionPadding) / 2);
-  background-image: url(../images/subscribe.jpg);
   background-size: cover;
   position: relative;
   color: white;
   text-align: center;
-}
-.footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0 0 0 / 70%);
+  background-color: var(--secondColor);
 }
 .footer .container {
   position: relative;
 }
 .footer img {
-  margin-bottom: 20px;
+  width: 120px;
 }
 .footer p:not(.copyright) {
   text-transform: uppercase;
@@ -962,13 +942,17 @@ font-size: 18px;
   width: fit-content;
   margin:  20px auto;
 }
+.footer a {
+  text-decoration: none;
+  color: white;
+}
 .footer .social-icons i {
   padding: 10px 15px;
 }
 .footer .copyright {
   margin-top: 60px;
 }
-.footer .copyright span {
+.footer a .copyright span {
   font-weight: bold;
   color: var(--mainColor);
 }
